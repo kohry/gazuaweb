@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gazua</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/icon.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/themes/basic/assets/fonts/icons.svg'>
+
+
+</head>
+
+<style>
+    body {
+        padding: 15px;
+    }
+</style>
+
+<body>
+
+    <!-- header -->
+    <h1 class="ui header">
+        The Orakgarak Lab
+        <div class="sub header">블록체인을 데이터로 연구하자! (Current Update : 2018-01-20)</div>
+    </h1>
+
+    <!-- menu -->
+    <div class="ui pointing menu">
+        <a class="active item">
+            Home
+        </a>
+        <a class="item">
+            Messages
+        </a>
+        <a class="item">
+            Friends
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <p>각 나라의 시세, 거래소, 프리미엄을 알수 있는 곳입니다.</p>
+    </div>
+
+    <!-- exchange rate -->
+    <div class="ui tag labels teal" id ="ex">
+        <a class="ui label">
+            현재 USD
+            <span>[[ex_usd]]</span>원
+        </a>
+        <a class="ui label">
+            현재 JPY
+            <span>[[ex_jpy]]</span>원
+        </a>
+    </div>
+
+    <!-- content -->
+    <table class="ui sortable celled table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>No Action</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Jamie</td>
+                <td class="positive">Approved</td>
+                <td class="warning">Requires call</td>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td class="negative">Denied</td>
+                <td>None</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>3 People</th>
+                <th>2 Approved</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+
+    <!-- rating -->
+    <table class="ui celled padded table">
+        <thead>
+            <tr>
+                <th class="single line">Evidence Rating</th>
+                <th>Effect</th>
+                <th>Efficacy</th>
+                <th>Consensus</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <h2 class="ui center aligned header">A</h2>
+                </td>
+                <td class="single line">
+                    Power Output
+                </td>
+                <td>
+                    <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+                </td>
+                <td class="right aligned">
+                    80%
+                    <br>
+                    <a href="#">18 studies</a>
+                </td>
+                <td>Creatine supplementation is the reference compound for increasing muscular creatine levels; there is variability
+                    in this increase, however, with some nonresponders.</td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="ui center aligned header">A</h2>
+                </td>
+                <td class="single line">
+                    Weight
+                </td>
+                <td>
+                    <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+                </td>
+                <td class="right aligned">
+                    100%
+                    <br>
+                    <a href="#">65 studies</a>
+                </td>
+                <td>Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess potency</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    //Exchange rate for each country
+    var exchangeVM = new Vue({
+        el: element,
+        data: {
+            message: '이 페이지는 ' + new Date() + ' 에 로드 되었습니다'
+        },
+        method: {
+
+        }
+    })
+
+
+    
+
+
+</script>
